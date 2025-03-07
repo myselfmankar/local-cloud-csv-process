@@ -80,7 +80,16 @@ aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name Metadata
 }
 
 ```
-
+## ⚠️ Known Issues & Workarounds
+- **Docker Initialization Timing**:  
+  In rare cases, Localstack might not initialize resources automatically due to container readiness timing.  
+  **Fix**:  
+  ```bash
+# Manual setup (if automated init fails)
+docker exec localstack awslocal s3 mb s3://csv-bucket
+docker exec localstack awslocal dynamodb create-table ...
+```
+  
 ## 🛑 Manual Override
 ```
 # Create S3 bucket
