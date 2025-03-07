@@ -1,8 +1,7 @@
-# local-cloud-csv-process# 📁 Localstack CSV Processing Pipeline
+📁 Localstack CSV Processing Pipeline
 
 A cloud-based system to process CSV files, extract metadata, and store it using **Localstack** (AWS emulator). Perfect for local development/testing without AWS costs.
 
-![Architecture](https://imgur.com/7QZJ9fL.png)
 
 ## 🎯 Core Deliverables
 1. **CSV Processing Pipeline**  
