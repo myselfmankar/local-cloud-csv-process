@@ -94,9 +94,11 @@ aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name Metadata
 ## 🛑 Manual Override
 ```
 # Create S3 bucket
+```
 docker exec localstack awslocal s3 mb s3://csv-bucket
-
+```
 # Create DynamoDB table
+```
 docker exec localstack awslocal dynamodb create-table \
   --table-name Metadata \
   --attribute-definitions AttributeName=filename,AttributeType=S \
